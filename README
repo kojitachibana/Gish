@@ -1,0 +1,101 @@
+Gish::Beat Slicer for monome64.
+
+Gish is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option ) any later version.
+
+Gish is distributed in the hope that it will be useful,
+but WITHIOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Gish. if not, see <http:/www.gnu.org/licenses/>.
+
+=> Features
+   Beat Slice and Sequencer
+   4 Audio Tracks
+   Editable parameters:
+   Plyaback position select, Sample pitch, Reverce playback and Beat repeat
+
+=> OSC Settings
+   Prefix: /chuck
+   Receive port: 8080
+
+=> How To Run
+   1.Assign Audio file path
+   2.Launch Cish.ck(Add Shread button or cmd+) on miniAudicle
+     (http://audicle.cs.princeton.edu/mini/)
+   3.Push Enter key.(Enter key is assigned Sequnecer start button.)
+   4.When you push space key, monome LED params change.
+   
+=> HID Keyboad assignments
+   enter: Start/Stop Sequence.
+   space: monome LED Params Change(sample => pitch => reverce => repeat)
+   z: Select Track 01
+   x: Select Track 02
+   c: Select Track 03
+   v: Select Track 04
+   a: BPM-5
+   s: BPM+5
+   delete: All LED Off(send osc command "/chuck/clear")
+
+=> LED Pamams Assignmets
+
+   1.Sample plyaback position
+   When you push the lighting LED(selected sample position), this step is muted.
+   ---------------------------------------
+                                      ROW:Position
+             [0][1][2][3][4][5][6][7] 7
+             [0][1][2][3][4][5][6][7] 6
+             [0][1][2][3][4][5][6][7] 5
+             [0][1][2][3][4][5][6][7] 4
+             [0][1][2][3][4][5][6][7] 3
+             [0][1][2][3][4][5][6][7] 2
+             [0][1][2][3][4][5][6][7] 1
+             [0][1][2][3][4][5][6][7] 0
+    COL:Steps 0  1  2  3  4  5  6  7
+    ---------------------------------------
+
+   2.Plyaback Pitch
+   ---------------------------------------
+                                       ROW:Pitch
+             [0][1][2][3][4][5][6][7]  -(no param assigned...)
+             [0][1][2][3][4][5][6][7]  3
+             [0][1][2][3][4][5][6][7]  2
+             [0][1][2][3][4][5][6][7]  1
+             [0][1][2][3][4][5][6][7]  0
+             [0][1][2][3][4][5][6][7] -1
+             [0][1][2][3][4][5][6][7] -2
+             [0][1][2][3][4][5][6][7] -3
+    COL:Steps 0  1  2  3  4  5  6  7
+   ---------------------------------------
+
+   3.Reverce Plyaback
+   ---------------------------------------
+                                      ROW:Reverce
+             [0][1][2][3][4][5][6][7] 7
+             [0][1][2][3][4][5][6][7] 6
+             [0][1][2][3][4][5][6][7] 5
+             [0][1][2][3][4][5][6][7] 4
+             [0][1][2][3][4][5][6][7] 3
+             [0][1][2][3][4][5][6][7] 2
+             [0][1][2][3][4][5][6][7] 1
+             [0][1][2][3][4][5][6][7] 0
+    COL:Steps 0  1  2  3  4  5  6  7
+   ---------------------------------------
+
+   4.Beat repeat
+   ---------------------------------------
+                                      ROW:repeat
+             [0][1][2][3][4][5][6][7] 7
+             [0][1][2][3][4][5][6][7] 6
+             [0][1][2][3][4][5][6][7] 5
+             [0][1][2][3][4][5][6][7] 4
+             [0][1][2][3][4][5][6][7] 3
+             [0][1][2][3][4][5][6][7] 2
+             [0][1][2][3][4][5][6][7] 1
+             [0][1][2][3][4][5][6][7] 0
+    COL:Steps 0  1  2  3  4  5  6  7
+   ---------------------------------------
